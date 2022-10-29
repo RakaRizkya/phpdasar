@@ -8,19 +8,19 @@ Komentar */
 //echo "Hello World";
 //print "Hello World";
 //print_r("Hello World");
-// var_dump("Hello World");
+//var_dump("Hello World");
 
 // $nama = "Raka";
-// echo "Nama saya $nama";
+// echo "Nama Saya $nama";
 // echo "<br>";
 // echo 'Nama saya $nama';
 // echo "<br>";
 
  
 // Operator + - / * %
-// $angka1 = 10;
-// $angka2 = 20;
-// echo $angka1 + $angka2;
+// $angka1 = 15;
+// $angka2 = 4;
+// echo $angka1 % $angka2;
 // echo "<br>";
  
 // Concat .
@@ -35,14 +35,14 @@ Komentar */
 // echo $m;
 
 // Perbandingan <, >, <=, >=, ==, !=
-// var_dump(1 == 5);
+// var_dump(1 != 5);  
 // var_dump(1 == "1");
 
-//Identitas : ===, !==
-// var_dump(1 === "1");
+// Identitas : ===, !==
+// var_dump(1 !== 1);
 
 // Logika : AND (&&), OR(||), NOT (!)
-var_dump(1<5 || 2>3);
+// var_dump(1<5 || 2>3);
 
 ?>
 
@@ -55,16 +55,11 @@ var_dump(1<5 || 2>3);
     <title>Belajar PHP</title>
 </head>
 <body>
-    <h1> 
-        <?php 
-            // $a = "Andi";
-            // echo $a; 
-        ?>
-    </h1>
-    <br>
-    <?php 
-        // $x = "Doni";
-        // echo "<h1>Selamat datang $x</h1>";
+    <?php
+        // $nama = "Raka";
+        // echo "<h1>Nama Saya $nama</h1>";
     ?>
+    <?php $nama="Raka"; ?>
+    <h1>Nama Saya <?= $nama; ?></h1>
 </body>
 </html>
