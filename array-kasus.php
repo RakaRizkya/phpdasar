@@ -1,5 +1,6 @@
 <?php
-$pegawai = [["Raka", "19970407", "PSDJ", "rakarizkya07@gmail.com"], ["Unyil", "19880903", "PP", "email@gmail.com"]];
+$pegawai = [["Raka", "19970407", "PSDJ", "rakarizkya07@gmail.com"], ["Unyil", "19880903", "PP", "email@gmail.com"], ["Andi", "19790101", "Ketua", "gmail@gmail.com"]];
+// echo $pegawai[1][2];
 ?>
 
 <!DOCTYPE html>
@@ -13,13 +14,13 @@ $pegawai = [["Raka", "19970407", "PSDJ", "rakarizkya07@gmail.com"], ["Unyil", "1
 <body>
     <h1>Data Pegawai</h1>
 
-    <?php foreach($pegawai as $pgw) { ?>
+    <?php foreach($pegawai as $pgw) : ?>
         <ul>
-            <li>Nama : <?php echo $pgw[0]; ?></li>
-            <li>NIP : <?php echo $pgw[1]; ?></li>
-            <li>Jabatan : <?php echo $pgw[2]; ?></li>
-            <li>Email : <?php echo $pgw[3]; ?></li>        
+            <li>Nama : <?= $pgw[0]; ?></li>
+            <li>NIP : <?= $pgw[1]; ?></li>
+            <li>Jabatan : <?= $pgw[2]; ?></li>
+            <li>Email : <?= $pgw[3]; ?></li>        
         </ul>
-    <?php } ?>
+    <?php endforeach ?>
 </body>
 </html>

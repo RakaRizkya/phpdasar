@@ -22,10 +22,12 @@ $hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at"];
 // echo $hari[3];
 
 // menambahkan elemen pada array
-print_r($hari);
+// print_r($hari);
 echo "<br>";
 $hari[] = "Sabtu";
 $hari[] = "Minggu";
 print_r($hari);
-
+echo "<br>";
+// var_dump($hari);
+echo $hari[0]; 
 ?>

@@ -1,7 +1,8 @@
 <?php 
 
-function salam($waktu="Pagi", $nama="Admin") {
-    return "Selamat $waktu, $nama";
+function LuasLingkaran($r) {
+    $luas = 3.14 * $r * $r;
+    return $luas; 
 }
 
 ?>
@@ -15,6 +16,6 @@ function salam($waktu="Pagi", $nama="Admin") {
     <title>Document</title>
 </head>
 <body>
-    <h1><?= salam("Malam", "User"); ?></h1>    
+    <h1>Luas Lingkaran adalah <?= LuasLingkaran(7) ?> m2 </h1>
 </body>
 </html>

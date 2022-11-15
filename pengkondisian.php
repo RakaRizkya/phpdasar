@@ -1,10 +1,10 @@
 <?php
 // Pengkondisian
-$x = 10;
-if ($x>10) {
-    echo "benar";
-} elseif ($x<10) {
-    echo "salah";
+$x = 1;
+if ($x > 5) {
+    echo "Besar";
+} else if($x < 5) {
+    echo "Kecil";
 } else {
-    echo "sama";
+    echo "Pas";
 }

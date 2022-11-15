@@ -1,15 +1,15 @@
 <?php
 // Menampilkan tanggal dengan format tertentu 
-// echo date("d-m-y") . "<br>";
+//echo date("D m y") . "<br>";
 
 // Menampilkan waktu
 // echo time();
 
 // nested function
-// echo date("l", time() + 15*24*3600)."<br>";
+// echo date("l", time() + 2*24*3600)."<br>";
 
 // membuat sendiri detik
-// jam, menit, detik, bulan, tanggal, tahun
+// jam, menit, detik, bulan, tahun, tanggal
 // echo date("l", mktime(0,0,0,4,1997,7)). "<br>";
 
 // konversi string ke date

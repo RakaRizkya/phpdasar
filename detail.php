@@ -1,3 +1,16 @@
+<?php
+// cek apakah tidak ada data di dalam $_GET
+if(!isset($_GET["nama"]) ||
+    !isset($_GET["nip"]) ||
+    !isset($_GET["email"]) ||
+    !isset($_GET["jabatan"]) ||
+    !isset($_GET["gambar"])
+    ) {
+    // redirect
+    header("Location: superglobals.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

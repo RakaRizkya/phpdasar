@@ -60,4 +60,3 @@ $pegawai = [
     <?php } ?>
 </body>
 </html>
-
