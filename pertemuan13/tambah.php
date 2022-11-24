@@ -1,20 +1,29 @@
 <?php
-// Koneksi ke database
-$conn = mysqli_connect("localhost", "root", "", "phpdasar");
+require_once 'functions.php';
 
 // Cek apakah tombol submit sudah pernah ditekan atau belum
 if (isset($_POST["submit"])) {
-    // var_dump($_POST);
-    // ambil dan masukkan data dari yang dikirim dalam form
-    $nip = $_POST["Nip"];
-    $nama = $_POST["Nama"];
-    $email = $_POST["Email"];
-    $jabatan = $_POST["Jabatan"];
-    $gambar = $_POST["Gambar"];
 
-    // Query insert data, urutan sesuaikan dengan tabel di database
-    $query = "INSERT INTO pegawai VALUES ('', '$nama', '$nip', '$email', '$jabatan', '$gambar')";
-    mysqli_query($conn, $query);
+    // var_dump($_POST); die;
+    // var_dump($_FILES); die;
+
+    // Cek apakah data berhasil ditambahkan atau tidak (affected rows)
+    if(tambah($_POST) > 0) {
+        echo "
+        <script>
+            alert('Data berhasil ditambahkan!');
+            document.location.href = 'index.php';
+        </script>
+        ";
+
+    } else {
+        echo "
+        <script>
+            alert('Data gagal ditambahkan!');
+            document.location.href = 'index.php';
+        </script>
+        ";
+    }
 
 }
 
@@ -30,27 +39,27 @@ if (isset($_POST["submit"])) {
 <body>
     <h1>Tambah Data Pegawai</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label for="nip">NIP : </label>
-                <input type="text" name="Nip" id="nip">
+                <input type="text" name="Nip" id="nip" required>
             </li>
             <li>
                 <label for="nama">Nama : </label>
-                <input type="text" name="Nama" id="nama">
+                <input type="text" name="Nama" id="nama" required>
             </li>
             <li>
                 <label for="email">Email : </label>
-                <input type="text" name="Email" id="email">
+                <input type="text" name="Email" id="email" required>
             </li>
             <li>
                 <label for="jabatan">Jabatan : </label>
-                <input type="text" name="Jabatan" id="jabatan">
+                <input type="text" name="Jabatan" id="jabatan" required>
             </li>
             <li>
                 <label for="gambar">Gambar : </label>
-                <input type="text" name="Gambar" id="gambar">
+                <input type="file" name="gambar" id="gambar">
             </li>
             <li>
                 <button type="submit" name="submit">Tambah Data</button>

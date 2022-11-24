@@ -1,18 +1,17 @@
 <?php
 
 // array numerik
-// $pegawai = [["Raka", "19970407", "PSDJ", "rakarizkya07@gmail.com"], ["Unyil", "19880903", "PP", "email@gmail.com"]];
+// $pegawai = [["Nicholas", "19970407", "PSDJ", "rakarizkya07@gmail.com"], ["Unyil", "19880903", "PP", "email@gmail.com"]];
 
 // array assosiatif
 $pegawai = [
     [
-        "nama" => "Raka", 
-        "nip" => "19970407", 
+        "nip" => "19970407",
+        "nama" => "Nicholas Saputra", 
         "jabatan" => "PSDJ", 
-        "email" => "rakarizkya07@gmail.com",
+        "email" => "nicholas.saputra@gmail.com",
         "gambar" => "foto1.jpg"
-    ],
-            
+    ],        
     [
         "nama" => "Unyil",
         "nip" => "19880903",
@@ -35,14 +34,14 @@ $pegawai = [
 <body>
     <h1>Data Pegawai</h1>
 
-    <?php foreach($pegawai as $pgw) { ?>
+    <?php foreach($pegawai as $pgw) : ?>
         <ul>
-            <li><img src="img/<?php echo $pgw["gambar"]; ?>"></li>
-            <li>Nama : <?php echo $pgw["nama"]; ?></li>
-            <li>NIP : <?php echo $pgw["nip"]; ?></li>
-            <li>Jabatan : <?php echo $pgw["jabatan"]; ?></li>
-            <li>Email : <?php echo $pgw["email"]; ?></li>        
+            <li><img src="img/<?= $pgw["gambar"]; ?>"></li>
+            <li>Nama : <?= $pgw["nama"]; ?></li>
+            <li>NIP : <?= $pgw["nip"]; ?></li>
+            <li>Jabatan : <?= $pgw["jabatan"]; ?></li>
+            <li>Email : <?= $pgw["email"]; ?></li>        
         </ul>
-    <?php } ?>
+    <?php endforeach ?>
 </body>
 </html>
